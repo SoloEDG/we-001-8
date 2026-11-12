@@ -1,5 +1,9 @@
 import type { Unit, Profession } from "../../../shared/types";
 import { professions } from "./professions";
+/**
+ * 旧版固定编队，仅用于单场工具/测试。
+ * 战役中的参战单位由 features/campaign/model/forces.ts 生成。
+ */
 export function createUnits(): Unit[] {
   return (
     [
@@ -20,6 +24,8 @@ export function createUnits(): Unit[] {
     y,
     team,
     maxHp: professions[job].hp,
+    level: 1,
+    xp: 0,
     statuses: [],
     moved: false,
     acted: false,

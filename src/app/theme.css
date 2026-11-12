@@ -629,3 +629,252 @@ footer b {
     font-size: 8px;
   }
 }
+
+/* ---------------- 本地战役 ---------------- */
+.campaign-strip {
+  margin-top: 18px;
+  padding: 16px 18px;
+}
+.campaign-head h3 {
+  margin-bottom: 12px;
+}
+.stage-track {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+}
+.stage-track li {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #3a514a;
+  border-top: 2px solid #4a5d52;
+  padding: 10px 12px;
+  color: #789188;
+}
+.stage-track li b {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #4a5d52;
+  border-radius: 50%;
+  font-size: 11px;
+}
+.stage-track li.current {
+  border-color: #b7bb81;
+  border-top-color: #d2c47d;
+  color: #e4d6a8;
+  background: #2a3a2e;
+}
+.stage-track li.done {
+  border-top-color: #79b9b5;
+  color: #a3c8b9;
+}
+.stage-track li.done b {
+  background: #2f5147;
+  border-color: #79b9b5;
+  color: #cfeee6;
+}
+.campaign-meta {
+  display: flex;
+  gap: 22px;
+  font-size: 11px;
+  color: #8fa095;
+}
+.campaign-meta b {
+  color: #d2c47d;
+  font-weight: 500;
+}
+
+/* 简报：名册选择 */
+.roster-pick {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.pick-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  background: transparent;
+  border-color: #2e3d33;
+  padding: 9px 8px;
+}
+.pick-row.chosen {
+  border-color: #b4b57a;
+  background: #2c3d2f;
+}
+.pick-row.down {
+  opacity: 0.4;
+}
+.pick-check {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #4a5d52;
+  border-radius: 50%;
+  color: #d2c47d;
+  font-size: 12px;
+}
+.pick-row.chosen .pick-check {
+  background: #c8b47b;
+  color: #17271c;
+  border-color: #c8b47b;
+}
+.pick-body {
+  flex: 1;
+}
+.pick-body b {
+  font-size: 12px;
+  font-weight: 500;
+}
+.pick-body i {
+  font-style: normal;
+  font-size: 9px;
+  color: #a3b8a4;
+  margin-left: 6px;
+}
+.pick-body small {
+  display: block;
+  color: #7c9789;
+  font-size: 9px;
+  margin: 3px 0;
+}
+.xp-line {
+  display: block;
+  height: 3px;
+  background: #34433a;
+  width: 100%;
+}
+.xp-line i {
+  display: block;
+  height: 100%;
+  background: #8fb3c9;
+}
+.pick-hp {
+  font-size: 12px;
+  color: #c5d6c4;
+}
+.pick-hp.hurt {
+  color: #d5ac73;
+}
+.pick-hp small {
+  color: #7f9687;
+}
+
+.supply-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid #2e3d33;
+  padding-top: 10px;
+  margin-bottom: 12px;
+}
+.supply-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  color: #9fb0a2;
+}
+.supply-row span {
+  flex: 1;
+}
+.supply-row button {
+  font-size: 9px;
+  padding: 6px 8px;
+}
+
+.block-banner {
+  border: 1px solid #b97c61;
+  background: #3a2a22;
+  color: #e5ba8b;
+  font-size: 11px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+}
+.launch {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.vacancy-note {
+  font-size: 10px;
+  margin: 8px 0 0;
+}
+
+/* 部署预览地图标记 */
+.briefing-map .tile {
+  cursor: default;
+}
+.slot-marker {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #e2c47d;
+  font-size: 15px;
+  z-index: 2;
+  text-shadow: 0 0 6px #000;
+}
+
+/* 结算面板 */
+.reward-list {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.reward-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  border-bottom: 1px solid #2e3d33;
+  padding-bottom: 7px;
+}
+.reward-list li span {
+  flex: 1;
+}
+.reward-list li b {
+  color: #d2c47d;
+  font-weight: 500;
+}
+.reward-list li i {
+  font-style: normal;
+  color: #94b89b;
+  font-size: 10px;
+}
+.reward-list li i.muted,
+.cleared-list .muted {
+  color: #6f8276;
+}
+.reward-supply {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #b9c9b6;
+  margin-bottom: 14px;
+}
+.cleared-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #a3c8b9;
+}
+.complete-panel .launch {
+  margin-top: 10px;
+}
